@@ -33,7 +33,7 @@ public class BaseSteps {
 	private void setUpBrowserAndConfig() {
 		// Setup Browser
 		Playwright playwright = Playwright.create();
-		browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false).setArgs(Arrays.asList("--start-maximized")));
+		browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(true).setArgs(Arrays.asList("--start-maximized")));
 		page = browser.newPage();
 		page.setDefaultTimeout(30000);
 		page.setViewportSize(2560, 1440);
